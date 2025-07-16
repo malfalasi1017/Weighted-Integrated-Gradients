@@ -1,0 +1,34 @@
+[project]
+name = "weighted-integrated-gradients"
+version = "0.1.0"
+description = "Weighted Integrated Gradients for Deep Neural Networks"
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    "tensorflow>=2.10.0,<3.0.0",
+    "numpy>=1.21.0",
+    "matplotlib>=3.5.0",
+    "pillow>=8.0.0",
+    "scipy>=1.7.0",
+    "ipython>=7.0.0",
+    "jupyter>=1.0.0",
+    "torch>=2.5.1",
+    "torchvision>=0.20.1",
+    "scikit-learn>=1.3.2",
+    "pandas>=2.0.3",
+    "tensorflow-hub>=0.16.1",
+    "bert>=2.2.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["InceptionModel", "IntegratedGradients", "VisualizationLibrary", "BertModel"]
+
+[tool.uv]
+dev-dependencies = [
+    "jupyter>=1.0.0",
+    "ipykernel>=6.0.0",
+]
